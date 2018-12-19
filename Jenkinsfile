@@ -33,7 +33,7 @@ pipeline {
   environment {
     registry = "ashutoshaggarwal/samplerepo"
     registryCredential = 'micra25#'
-    dockerImage = ‘’
+    dockerImage = ''
   }
   agent any
   stages {
