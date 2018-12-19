@@ -31,7 +31,7 @@
 
 pipeline {
   environment {
-    registry = "ashutoshaggarwal/samplerepo"
+    registry = "ashutoshaggarwal/sample"
     registryCredential = 'micra25#'
   }
   agent any
