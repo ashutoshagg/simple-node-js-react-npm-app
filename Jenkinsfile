@@ -32,7 +32,7 @@
 pipeline {
   environment {
     registry = "ashutoshaggarwal/samplerepo"
-    registryCredential = 'micra25#'
+    registryCredential = 'dockerhub'
     dockerImage = ''
   }
   agent any
