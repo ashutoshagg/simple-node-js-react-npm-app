@@ -33,15 +33,24 @@ pipeline {
   environment {
     registry = "ashutoshaggarwal/samplerepo"
     registryCredential = 'micra25#'
+    dockerImage = ‘’
   }
   agent any
   stages {
     stage('Building image') {
       steps{
         script {
-          docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
+    stage(‘Deploy Image’) {
+      steps{
+        script {
+          docker.withRegistry( ‘’, registryCredential ) {
+            dockerImage.push()
+          }
+        }
+      }
   }
 }
