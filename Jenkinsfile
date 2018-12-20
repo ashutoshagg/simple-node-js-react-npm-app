@@ -37,6 +37,13 @@ pipeline {
   }
   agent any
   stages {
+    stage('scm checkout'){
+        steps{
+            script{
+                scm checkout
+            }
+        }
+      }
     stage('Building image') {
         steps{
             script {
