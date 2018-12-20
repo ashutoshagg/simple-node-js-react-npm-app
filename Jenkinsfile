@@ -40,7 +40,7 @@ pipeline {
     stage('scm checkout'){
         steps{
             script{
-                scm checkout
+                git clone 'https://github.com/ashutoshagg/simple-node-js-react-npm-app.git' 
             }
         }
       }
