@@ -39,9 +39,9 @@ pipeline {
   stages {
     stage('scm checkout'){
         steps{
-            script{
+        
                 git clone 'https://github.com/ashutoshagg/simple-node-js-react-npm-app.git' 
-            }
+            
         }
       }
     stage('Building image') {
