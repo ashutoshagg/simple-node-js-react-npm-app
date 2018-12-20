@@ -39,8 +39,8 @@ pipeline {
   stages {
     stage('scm checkout'){
         steps{
-        
-                git 'https://github.com/ashutoshagg/simple-node-js-react-npm-app.git' 
+        scm checkout
+             
             
         }
       }
